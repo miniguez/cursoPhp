@@ -12,7 +12,7 @@ echo "World \n";
 $boolean = true;  // TRUE or True
 $boolean = false; // FALSE or False
 
-
+// Variables
 $int1 = 12;
 $int2 = -12;
 $int3 =  012;//Octal
@@ -37,6 +37,62 @@ var_dump($res);
 var_dump($div);
 
 $num = 0;
+$num +=1 ; 
+echo $num++;// 1 
+echo ++$num;// 3 
+$num -= 2;
+$num /= $float;
+
+//Strings
+$num = 5;
+$varString = '$num';
+echo $varString;
+$varString = "el valor de la variabel num  = $num \n";
+echo $varString;
+$otroString = " otra forma de incluir variables {$num}";
+echo $otroString;
+$otroString2 = " otra 2 forma de incluir variables $${num}";
+echo $otroString2;
+
+$stringMult = <<<'END'
+Multi line
+string
+END;
+
+echo $stringMult;
+echo 'Este es un '.' String';
+echo 'multimples', 'parametros', ' en echo';
+
+
+//Constantes
+define("FOO", "algo");
+echo FOO;
+
+echo "Este es el valor de la constante FOO =".FOO;
+
+define("_FOO", 56);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
