@@ -4,7 +4,7 @@
     <link   href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
 </head>
- 
+
 <body>
     <div class="container">
             <div class="row">
@@ -13,7 +13,7 @@
             <div class="row">
                 <!-- Segunda parte -->
                 <p>
-                    <a href="create.php" class="btn btn-success">Create</a>
+                    <a href="create.php" class="btn btn-success">Crear</a>
                 </p>
                 <!-- Segunda parte -->
                 <table class="table table-striped table-bordered">
