@@ -1,37 +1,39 @@
 <?php
-     
-    require 'database.php';     
-    if ( !empty($_POST)) {      
+
+    require 'database.php';
+    if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
         $emailError = null;
         $mobileError = null;
-         
+
         // keep track post values
         $name = $_POST['nombre'];
         $email = $_POST['email'];
         $mobile = $_POST['celular'];
-         
+
         // validate input
         $valid = true;
-        if (empty($name)) {
+
+        if (empty($name) ) {
             $nameError = 'Por favor ingresa tu nombre';
             $valid = false;
         }
-         
+
         if (empty($email)) {
             $emailError = 'Por favor ingresa tu correo';
             $valid = false;
+
         } else if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
             $emailError = 'Por favor ingresa una dirección de correo valida';
             $valid = false;
         }
-         
+
         if (empty($mobile)) {
             $mobileError = 'Por favor ingresa tu celular';
             $valid = false;
         }
-         
+
         // insert data
         if ($valid) {
             $pdo = Database::connect();
@@ -51,15 +53,15 @@
     <link   href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
 </head>
- 
+
 <body>
     <div class="container">
-     
+
                 <div class="span10 offset1">
                     <div class="row">
                         <h3>Agregar contacto</h3>
                     </div>
-             
+
                     <form class="form-horizontal" action="create.php" method="post">
                       <div class="control-group <?php echo !empty($nameError)?'error':'';?>">
                         <label class="control-label">Nombre</label>
@@ -93,7 +95,7 @@
                           <a class="btn" href="index.php">Regresar</a>
                         </div>
                     </form>
-                </div>                 
-    </div> 
+                </div>
+    </div>
   </body>
 </html>
